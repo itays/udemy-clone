@@ -1,13 +1,12 @@
 "use client";
 import { UserButton } from "@clerk/nextjs";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 const NavbarRoutes = () => {
   const pathName = usePathname();
-  const router = useRouter();
 
   const isTeacherPage = pathName.startsWith("/teacher");
   const isPlayerPage = pathName.includes("/chapter");
